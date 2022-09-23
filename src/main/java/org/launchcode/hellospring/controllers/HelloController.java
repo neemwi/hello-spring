@@ -33,7 +33,7 @@ public class HelloController {
     // Handles request of the form /hello/LaunchCode
     @GetMapping("{name}")
     public String helloWithPathParameter(@PathVariable String name) {
-        return "Hello, " + name + "!";
+        return "Hi, " + name + "!";
     }
     // lives /hello/form
 //    @GetMapping("form")
