@@ -43,5 +43,19 @@ public class HelloController {
         return "hello-list";
     }
 
+    @GetMapping("hello-num")
+    public String helloNumbers(Model model) {
+        List<Integer> nums = new ArrayList<>();
+        nums.add(2);
+        nums.add(4);
+        nums.add(6);
+        nums.add(8);
+        nums.add(-8);
+        nums.add(9);
+        nums.add(3);
+        model.addAttribute("nums", nums);
+        return "hello-numlist";
+    }
+
 
 }

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<!--    <ul>-->
+<!--        <th:block th:if="${nums.size() > 4}" th:each="num : ${nums}">-->
+<!--            <li th:text="${num}"></li>-->
+<!--        </th:block>-->
+<!--        <p th:unless = "${nums.size() < 4}">Add more Coffee</p>-->
+<!--    </ul>-->
+
+<!--        <ol th:if = "${nums.size() >= 4}">-->
+<!--            <li th:each="num : ${nums}" th:text="${num}"></li>-->
+<!--        </ol>-->
+
+        <ol th:if = "${nums.size() >= 4}">
+            <li th:each="num : ${nums}" th:if="${num > 0 and num%2 == 1}" th:text="${num}"></li>
+        </ol>
+
+<!--        <p th:unless = "${num <=0}">No negative</p>-->
+
+</body>
+</html>
